@@ -85,7 +85,7 @@ function Hjdo() {
             setLike(JSON.parse(likelocal))
         }
         
-    },[])
+    },[])  // 배열 []안에 값이 변할 때마다 이 함수를 실행 시키겠다는게 useEffect() 의 기능
 
 
     return (
@@ -138,15 +138,12 @@ function Hjdo() {
                                         {item.content}
                                     </ListGroup.Item>
                             })}
-
                         </ListGroup>
                     </Card>
 
 
                 </Row>
             </Container>
-
-
 
         </>
     )

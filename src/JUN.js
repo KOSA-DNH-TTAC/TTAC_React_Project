@@ -7,6 +7,9 @@ import { Container } from '@mui/system';
 import { NavLink, Link, Route, Routes } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import BjgoSwiperJUN from './BjgoSwiper_JUN';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 function JUN() {
   useEffect(() => {
@@ -41,12 +44,11 @@ function JUN() {
 
   return (
     <>
-      {/* <h3>JunHans favorite burger </h3> */}
-      <h1 id='mach1'>McDONALD's</h1>
-      <h3 id='mach3'>JunHans favorite burger </h3>
-      <div id='macdiv'>
-        <img id='mac' src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/200px-McDonald%27s_Golden_Arches.svg.png'></img>
-      </div>
+    
+    <BjgoSwiperJUN />
+
+    <h3 id='mach3'>JunHans</h3>
+    <h1 id='mach1'>McDONALD's</h1>
 
 {/* 네비바 */}
       <Navbar bg="light" expand="lg">
@@ -56,16 +58,17 @@ function JUN() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home"><img id='logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/McDonald%27s_SVG_logo.svg/2095px-McDonald%27s_SVG_logo.svg.png'></img></Nav.Link>
-            <Nav.Link href="#link"><b className='logo1'>MENU</b></Nav.Link>
-            <Nav.Link href="#link"><b className='logo1'>ABOUT</b></Nav.Link>
-            <Nav.Link href="#link"><b className='logo1'>CONTACT</b></Nav.Link>
+            <Nav.Link href="https://www.mcdonalds.co.kr/kor/menu/list.do"><b className='logo1'>MENU</b></Nav.Link>
+            <Nav.Link href="https://www.mcdonalds.co.kr/kor/story/intro/brandintro.do"><b className='logo1'>ABOUT</b></Nav.Link>
+            <Nav.Link href="https://www.mcdonalds.co.kr/kor/store/rental.do"><b className='logo1'>CONTACT</b></Nav.Link>
             
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
 
-      <h3 id='mach3'>MENU INFO </h3>
+
+      <h3 id='mach3'>- JunHans PICK!! -</h3>
       <Container>
     <div className='row'>
 
@@ -90,6 +93,7 @@ function JUN() {
         })
       }
        </div>
+      
        </Container>
     </>
   )
