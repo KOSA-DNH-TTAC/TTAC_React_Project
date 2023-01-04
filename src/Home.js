@@ -10,6 +10,8 @@ import AppAppBar from './modules/views/AppAppBar';
 import withRoot from './modules/withRoot';
 import { Routes, Route } from 'react-router-dom';
 import Hjdo from './Hjdo';
+import JUN from './JUN';
+
 function Index() {
   return (
     <React.Fragment>
@@ -17,6 +19,7 @@ function Index() {
       <Routes>
         <Route path='/' element={<div><ProductHero /><ProductCategories /></div>} />
         <Route path='/DOE' element={<Hjdo />} />
+        <Route path='/JUN' element={<JUN />} />
       </Routes>
   
       {/* 최상단 이미지 배너 */}
