@@ -1,4 +1,4 @@
-
+import './Hjdo.css'
 import { padding } from '@mui/system';
 import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -39,16 +39,17 @@ let mtjson = {
 
 const Wrapper = styled.section`
     padding: 4em;
-    background: papayawhip;
+    background : #F4F4F4;
     text-align:center;
 `;
 
-
+// background: papayawhip;
 function Hjdo() {
     const [mom, setMom] = useState(mtjson)
-    const [review, setReview] = useState(['날씨가 좋아요', '어쩔티비', '참깨빵 위에 순 쇠고기 패티 두 장 특별한 소스 양상추 치즈 피클 양파 까지'])
-    const [value, setValue] = useState("");
-
+    const [review, setReview] = useState([{user:"박예빈", content:'참깨빵 위에 순 쇠고기 패티 두 장 특별한 소스 양상추 치즈 피클 양파 까지'}])
+    const [value, setValue] = useState(""); //댓글 입력창 value
+    const [nickvalue, setNickValue] = useState("");
+    const [like, setLike] = useState([0, 0, 0, 0]);
 
 
     const handleSubmit = (e) => {
@@ -56,16 +57,33 @@ function Hjdo() {
         // setTodoData((prev) => [...prev, newTodo]);
         // localStorage.setItem('todoData', JSON.stringify([...todoData, newTodo]));
         let copy = [...review];
-        copy.push(value)
+        let newReview = {
+            user : nickvalue,
+            content : value
+        }
+        copy.push(newReview)
 
         setReview(copy);
+        console.log(copy)
         localStorage.setItem('review', JSON.stringify(copy));
         
         setValue("");
+        setNickValue("");
     }
     useEffect(()=>{
+        //로컬스토리지가 널이면?
+        if(localStorage.getItem('review') === null){
+            // localStorage.setItem('reivew', null)
+        }else{
         let local = localStorage.getItem('review')
-        setReview(JSON.parse(local))
+        setReview(JSON.parse(local)) 
+        }
+        if(localStorage.getItem('like')===null){
+        //    localStorage.setItem('like', null)
+        }else{
+            let likelocal = localStorage.getItem('like');
+            setLike(JSON.parse(likelocal))
+        }
         
     },[])
 
@@ -89,10 +107,16 @@ function Hjdo() {
 
                             {mom.burgers.map((item, index) => {
                                 return (
-                                    <Col>
-                                        <img style={{ height: '140px' }} src={item.burgerSrc}></img>
+                                    <Col key={index}>
+                                        <img className='hjburger' style={{ height: '140px' }} src={item.burgerSrc}></img>
                                         <h4>{item.burgername}</h4>
-                                        <span>{item.burgerinfo}</span>
+                                        <span>{item.burgerinfo}</span><br></br>
+                                        <span><span onClick={()=>{
+                                            let likecopy = [...like];
+                                            likecopy[index]++;
+                                            setLike(likecopy);
+                                            localStorage.setItem('like', JSON.stringify(likecopy));
+                                        }}>👍</span>{like[index]}</span>
                                     </Col>
                                 )
                             })}
@@ -103,13 +127,16 @@ function Hjdo() {
                 <hr></hr>
                 <Row>
                     <h2>후기</h2>
-                        <ReviewForm value={value} setValue={setValue} handleSubmit={handleSubmit}></ReviewForm>
+                        <ReviewForm value={value} setValue={setValue} nickvalue={nickvalue} setNickValue={setNickValue} handleSubmit={handleSubmit}></ReviewForm>
                 </Row>
                 <Row>
                     <Card style={{ width: '100%' }}>
                         <ListGroup variant="flush">
                             {review.map((item, index) => {
-                                return <ListGroup.Item>{item}</ListGroup.Item>
+                                return <ListGroup.Item key={index}>
+                                        <b>{item.user}&nbsp;&nbsp;</b>
+                                        {item.content}
+                                    </ListGroup.Item>
                             })}
 
                         </ListGroup>
