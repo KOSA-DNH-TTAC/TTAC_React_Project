@@ -8,15 +8,21 @@ import ProductHowItWorks from './modules/views/ProductHowItWorks';
 import ProductCTA from './modules/views/ProductCTA';
 import AppAppBar from './modules/views/AppAppBar';
 import withRoot from './modules/withRoot';
-
+import { Routes, Route } from 'react-router-dom';
+import Hjdo from './Hjdo';
 function Index() {
   return (
     <React.Fragment>
-      <AppAppBar />
+          <AppAppBar />
+      <Routes>
+        <Route path='/' element={<div><ProductHero /><ProductCategories /></div>} />
+        <Route path='/DOE' element={<Hjdo />} />
+      </Routes>
+  
       {/* 최상단 이미지 배너 */}
-      <ProductHero />  
+      {/* <ProductHero />   */}
       {/* 개인 페이지 이동 이미지 버튼 */}
-      <ProductCategories />
+      {/* <ProductCategories /> */}
       {/*  */}
       {/* <ProductHowItWorks /> 3가지 소개글 */}
       {/* <ProductCTA />
