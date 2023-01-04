@@ -11,6 +11,7 @@ import NoBrand from './YB/NoBrand';
 import Bjgo from './Bjgo';
 import Hjdo from './components/Hjdo';
 import JUN from './JUN';
+
 function Index() {
   return (
     <React.Fragment>
@@ -23,6 +24,7 @@ function Index() {
         <Route path='/Menu' element={<Menu />} />
         <Route path='/NoBrand' element={<NoBrand />} />
         <Route path='/JUN' element={<JUN />} />
+      
       </Routes>
   
       {/* 최상단 이미지 배너 */}
