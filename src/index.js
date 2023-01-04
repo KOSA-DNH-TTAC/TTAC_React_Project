@@ -4,7 +4,7 @@ import './index.css';
 import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Hjdo from './Hjdo';
+import Hjdo from './components/Hjdo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

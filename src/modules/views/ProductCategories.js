@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
 import Typography from '../components/Typography';
+import Hjdo from '../../components/Hjdo';
 import { NavLink, Link, Route, Routes } from 'react-router-dom';
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
@@ -119,7 +120,7 @@ function ProductCategories() {
                   backgroundImage: `url(${image.url})`,
                 }}
               />
-              
+
               <ImageBackdrop className="imageBackdrop" />
               <Link to={image.title}>
               <Box

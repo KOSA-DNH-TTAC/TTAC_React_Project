@@ -5,9 +5,8 @@ import ProductHero from './modules/views/ProductHero';
 import AppAppBar from './modules/views/AppAppBar';
 import withRoot from './modules/withRoot';
 import { Routes, Route } from 'react-router-dom';
-import Hjdo from './Hjdo';
 import Bjgo from './Bjgo';
-
+import Hjdo from './components/Hjdo';
 function Index() {
   return (
     <React.Fragment>
