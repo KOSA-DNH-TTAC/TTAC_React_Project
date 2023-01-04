@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
 import Typography from '../components/Typography';
-import Hjdo from '../../Hjdo';
+import Hjdo from '../../components/Hjdo';
 import { NavLink, Link, Route, Routes } from 'react-router-dom';
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
@@ -73,20 +73,16 @@ const images = [
     width: '40%',
   },
   {
-    url: 'images/doe.jpg',
-    title: 'DOE',
-    width: '38%',
-  },
-  {
     url: 'images/KakaoTalk_20221227_140444502.jpg',
     title: 'YB',
-    width: '38%',
+    width: '50%',
   },
   {
-    url: 'images/bam.png',
-    title: 'BUM',
-    width: '24%',
-  }
+    url: 'images/doe.jpg',
+    title: 'DOE',
+    width: '50%',
+  },
+  
 ];
 
 function ProductCategories() {
@@ -98,7 +94,7 @@ function ProductCategories() {
       {/* <Routes>
         <Route path='/DOE' element={<Hjdo />} />
       </Routes> */}
-      <Link to='/DOE'>이동</Link>
+
       <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
         {images.map((image) => (
             <ImageIconButton
@@ -120,7 +116,7 @@ function ProductCategories() {
                   backgroundImage: `url(${image.url})`,
                 }}
               />
-              
+
               <ImageBackdrop className="imageBackdrop" />
               <Link to={image.title}>
               <Box
@@ -153,7 +149,5 @@ function ProductCategories() {
     </Container>
   );
 }
-function Test() {
 
-}
 export default ProductCategories;
