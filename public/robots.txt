@@ -1,3 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
+# Algolia-Crawler-Verif: 98C49CAFF7AEED76
+
 User-agent: *
-Disallow:
+Allow: /
