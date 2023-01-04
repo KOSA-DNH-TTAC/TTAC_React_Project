@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
 import Typography from '../components/Typography';
-import Hjdo from '../../Hjdo';
 import { NavLink, Link, Route, Routes } from 'react-router-dom';
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
@@ -153,7 +152,5 @@ function ProductCategories() {
     </Container>
   );
 }
-function Test() {
 
-}
 export default ProductCategories;
