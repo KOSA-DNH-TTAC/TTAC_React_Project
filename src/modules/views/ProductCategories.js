@@ -98,7 +98,7 @@ function ProductCategories() {
       {/* <Routes>
         <Route path='/DOE' element={<Hjdo />} />
       </Routes> */}
-      <Link to='/DOE'>이동</Link>
+
       <Box sx={{ mt: 8, display: 'flex', flexWrap: 'wrap' }}>
         {images.map((image) => (
             <ImageIconButton
