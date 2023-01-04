@@ -3,7 +3,6 @@ import { padding } from '@mui/system';
 import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Card, ListGroup, Button, FloatingLabel } from 'react-bootstrap';
-// import { Input } from '@mui/material';
 import Form from 'react-bootstrap/Form';
 import styled from 'styled-components';
 import ReviewForm from './ReviewForm';
@@ -13,6 +12,7 @@ import ReviewForm from './ReviewForm';
 let mtjson = {
     title: "MOM's TOUCH",
     logo: "images/momstouch.png",
+    site : "http://momstouch.co.kr/",
     content: "맘스터치는 대한민국의 패스트푸드 프랜차이즈로, 맘스터치앤컴퍼니가 운영하는 브랜드이다. 맘스터치라는 이름은 엄마의 손길이라는 의미이다. 대표 메뉴로는 싸이버거, 인크레더블 버거, 내슈빌 핫치킨 시리즈 등이 있다. 2020년 4월 기준 1,262개의 가맹점을 가지고 있다",
     burgers: [{
         burgername: "싸이버거",
@@ -92,15 +92,18 @@ function Hjdo() {
         <>
             <Container className='mt-4'>
                 <Row>
-                    <Col>
-                        <img style={{ height: '250px', padding: '40px', border: '1px black solid' }} src={mom.logo}></img>
-                    </Col>
+                  
+                        <img style={{ width: '900px',   margin: "auto", display: "block", marginBottom:"40px" }} src={mom.logo}></img>
+                    
+                </Row>
+                <Row>
                     <Col>
                         <h1>{mom.title}</h1>
                         <p>{mom.content}</p>
+                        <Button  variant="warning">바로가기</Button>
                     </Col>
                 </Row>
-                <Row>
+                <Row className='mt-3'>
                     <h3>대표버거</h3>
                     <Wrapper>
                         <Row>
@@ -130,8 +133,9 @@ function Hjdo() {
                         <ReviewForm value={value} setValue={setValue} nickvalue={nickvalue} setNickValue={setNickValue} handleSubmit={handleSubmit}></ReviewForm>
                 </Row>
                 <Row>
-                    <Card style={{ width: '100%' }}>
-                        <ListGroup variant="flush">
+                    {/* <Col> */}
+                    <Card>
+                        <ListGroup className='w-100' variant="flush">
                             {review.map((item, index) => {
                                 return <ListGroup.Item key={index}>
                                         <b>{item.user}&nbsp;&nbsp;</b>
@@ -140,8 +144,7 @@ function Hjdo() {
                             })}
                         </ListGroup>
                     </Card>
-
-
+                    {/* </Col> */}
                 </Row>
             </Container>
 
