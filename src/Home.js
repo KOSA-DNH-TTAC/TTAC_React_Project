@@ -10,6 +10,10 @@ import AppAppBar from './modules/views/AppAppBar';
 import withRoot from './modules/withRoot';
 import { Routes, Route } from 'react-router-dom';
 import Hjdo from './Hjdo';
+import YB from './YB/YB';
+import Menu from './YB/Menu';
+import NoBrand from './YB/NoBrand';
+
 function Index() {
   return (
     <React.Fragment>
@@ -17,6 +21,9 @@ function Index() {
       <Routes>
         <Route path='/' element={<div><ProductHero /><ProductCategories /></div>} />
         <Route path='/DOE' element={<Hjdo />} />
+        <Route path='/YB' element={<YB />} />
+        <Route path='/Menu' element={<Menu />} />
+        <Route path='/NoBrand' element={<NoBrand />} />
       </Routes>
   
       {/* 최상단 이미지 배너 */}
