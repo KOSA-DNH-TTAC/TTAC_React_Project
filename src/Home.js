@@ -5,6 +5,9 @@ import ProductHero from './modules/views/ProductHero';
 import AppAppBar from './modules/views/AppAppBar';
 import withRoot from './modules/withRoot';
 import { Routes, Route } from 'react-router-dom';
+import YB from './YB/YB';
+import Menu from './YB/Menu';
+import NoBrand from './YB/NoBrand';
 import Bjgo from './Bjgo';
 import Hjdo from './components/Hjdo';
 function Index() {
@@ -15,6 +18,9 @@ function Index() {
         <Route path='/' element={<div><ProductHero /><ProductCategories /></div>} />
         <Route path='/DOE' element={<Hjdo />} />
         <Route path='/bam' element={<Bjgo />} />
+        <Route path='/YB' element={<YB />} />
+        <Route path='/Menu' element={<Menu />} />
+        <Route path='/NoBrand' element={<NoBrand />} />
       </Routes>
   
       {/* 최상단 이미지 배너 */}

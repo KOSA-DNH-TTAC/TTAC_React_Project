@@ -1,0 +1,58 @@
+[
+    {
+        "id": 0,
+        "name": "NBB 시그니처",
+        "eng_name": "NBB Signature",
+        "img": "https://www.shinsegaefood.com/uimages/2019/09/20/NBB%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98(1).png",
+        "desc": "직화로 불맛을 살린 두툼한 미트 패티에 진한 치즈를 얹어 깊은 맛을 선사하는 치즈버거"
+    },
+    {
+        "id": 1,
+        "name": "NBB 오리지널",
+        "eng_name": "NBB Original",
+        "img": "https://www.shinsegaefood.com/uimages/2019/09/20/NBB%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90(2).png",
+        "desc": "직화로 구워낸 두툼한 미트 패티에 신선한 양상추와 토마토, NBB 특제 버거 소스를 더한 오리지널 버거"
+    },
+    {
+        "id": 2,
+        "name": "콰트로 맥앤치즈",
+        "eng_name": "Quatro Mac&Cheese",
+        "img": "https://www.shinsegaefood.com/uimages/2022/11/15/%EC%BD%B0%ED%8A%B8%EB%A1%9C_%EB%A7%A5%EC%95%A4%EC%B9%98%EC%A6%88.png",
+        "desc": "네가지 치즈로 더욱 꾸덕하고 찐한 콰트로 맥앤치즈 버거"
+    },
+    {
+        "id": 3,
+        "name": "치킨시저샐러드",
+        "eng_name": "Chicken Caesar Salad",
+        "img": "https://www.shinsegaefood.com/uimages/2022/05/12/220502_%EC%B9%98%ED%82%A8%EC%8B%9C%EC%A0%80%EC%83%90%EB%9F%AC%EB%93%9C_%EB%8B%A8%ED%92%88.png",
+        "desc": "아삭하고 신선한 채소에 든든한 치킨 텐더와 갈릭시저드레싱으로 한끼 식사로 손색없는 샐러드"
+    },
+    {
+        "id": 4,
+        "name": "그린샐러드",
+        "eng_name": "Green Salad",
+        "img": "https://www.shinsegaefood.com/uimages/2022/05/12/220502_%EA%B7%B8%EB%A6%B0%EC%83%90%EB%9F%AC%EB%93%9C_%EB%8B%A8%ED%92%88.png",
+        "desc": "아삭하고 신선한 채소에 이탈리안드레싱으로 한끼 식사로 손색없는 샐러드"
+    },
+    {
+        "id": 5,
+        "name": "감자튀김",
+        "eng_name": "French Fries",
+        "img": "https://www.shinsegaefood.com/uimages/2019/09/20/%EA%B0%90%EC%9E%90%ED%8A%80%EA%B9%80.png",
+        "desc": "포슬포슬한 감자의 질감이 그대로 살아있는 고급 프랜치 프라이"
+    },
+    {
+        "id": 6,
+        "name": "어니언 도넛",
+        "eng_name": "Onion Doughnut",
+        "img": "https://www.shinsegaefood.com/uimages/2020/07/03/%EC%96%B4%EB%8B%88%EC%96%B8%EB%8F%84%EB%84%9B.png",
+        "desc": "촉촉함과 바삭함을 동시에 느낄 수 있는 NBB만의 어니언 도넛"
+    },
+    {
+        "id": 7,
+        "name": "크런치 윙",
+        "eng_name": "Crunchy Wing",
+        "img": "https://www.shinsegaefood.com/uimages/2021/09/07/%ED%81%AC%EB%9F%B0%EC%B9%98%EC%9C%99.jpg",
+        "desc": "바삭함이 터지는 NBB만의 크런치 윙"
+    }
+]
