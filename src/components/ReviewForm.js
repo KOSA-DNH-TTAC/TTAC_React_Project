@@ -19,22 +19,32 @@ function ReviewForm(props) {
     const handleChange = (e) => {
         props.setValue(e.target.value)
     }
+    const handleNickChange = (e) => {
+        props.setNickValue(e.target.value)
+    }
 
     return <form onSubmit={props.handleSubmit}>
+         <Form.Control
+                as="textarea"
+                placeholder="Nickname"
+                style={{ height: '10px', width :'200px', marginBottom:'13px'}}
+                value={props.nickvalue}
+                onChange={handleNickChange}
+            />
             <Form.Control
                 as="textarea"
                 placeholder="Leave a comment here"
                 style={{ height: '100px' }}
                 value={props.value}
                 onChange={handleChange}
-                onSubmit={props.handleSubmit}
-
             />
-            <input
-                className='p-2 text-blue-400 border-2 border-blue-400 rounded hover:text-white hover:bg-blue-200'
+            <Button
+            variant="primary"
+                // className='p-2 text-blue-400 border-2 border-blue-400 rounded hover:text-white hover:bg-blue-200'
                 type="submit"
                 value="입력"
-            />
+                style={{ marginTop: '7px', marginBottom:'13px' }}
+            >입력</Button>
         </form>
 
 }
